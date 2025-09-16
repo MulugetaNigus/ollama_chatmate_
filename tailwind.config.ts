@@ -47,6 +47,29 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        
+        // AI Chat Interface Colors
+        "chat-background": "hsl(var(--chat-background))",
+        "user-message": "hsl(var(--user-message))",
+        "user-message-foreground": "hsl(var(--user-message-foreground))",
+        "ai-message": "hsl(var(--ai-message))",
+        "ai-message-foreground": "hsl(var(--ai-message-foreground))",
+        
+        // Sidebar Colors
+        "sidebar-background": "hsl(var(--sidebar-background))",
+        "sidebar-hover": "hsl(var(--sidebar-hover))",
+        "sidebar-active": "hsl(var(--sidebar-active))",
+        "sidebar-border": "hsl(var(--sidebar-border))",
+        
+        // Input Colors
+        "input-background": "hsl(var(--input-background))",
+        "input-border": "hsl(var(--input-border))",
+        "input-focus": "hsl(var(--input-focus))",
+        
+        // Code Colors
+        "code-background": "hsl(var(--code-background))",
+        "code-border": "hsl(var(--code-border))",
+
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +85,14 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        "message": "var(--shadow-message)",
+        "sidebar": "var(--shadow-sidebar)",
+      },
+      transitionTimingFunction: {
+        "smooth": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "spring": "cubic-bezier(0.34, 1.56, 0.64, 1)",
       },
       keyframes: {
         "accordion-down": {
@@ -80,10 +111,32 @@ export default {
             height: "0",
           },
         },
+        "typing": {
+          "0%, 60%, 100%": {
+            transform: "scale(1)",
+            opacity: "0.4",
+          },
+          "30%": {
+            transform: "scale(1.4)",
+            opacity: "1",
+          },
+        },
+        "fadeInUp": {
+          from: {
+            opacity: "0",
+            transform: "translateY(4px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "typing": "typing 1.5s infinite ease-in-out",
+        "fadeInUp": "fadeInUp 0.3s ease-out",
       },
     },
   },

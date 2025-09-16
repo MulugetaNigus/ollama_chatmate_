@@ -2,41 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* AI Code Assistant Design System - Professional Dark Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Interface */
+    --background: 220 15% 7%;
+    --foreground: 220 15% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Chat Elements */
+    --chat-background: 220 15% 9%;
+    --user-message: 221 83% 53%;
+    --user-message-foreground: 220 15% 98%;
+    --ai-message: 220 15% 12%;
+    --ai-message-foreground: 220 15% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Sidebar */
+    --sidebar-background: 220 15% 5%;
+    --sidebar-hover: 220 15% 10%;
+    --sidebar-active: 221 83% 53%;
+    --sidebar-border: 220 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Input Area */
+    --input-background: 220 15% 11%;
+    --input-border: 220 15% 20%;
+    --input-focus: 221 83% 53%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* UI Components */
+    --card: 220 15% 10%;
+    --card-foreground: 220 15% 90%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --popover: 220 15% 8%;
+    --popover-foreground: 220 15% 95%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 220 15% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 220 15% 85%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --muted: 220 15% 12%;
+    --muted-foreground: 220 15% 60%;
 
-    --radius: 0.5rem;
+    --accent: 221 83% 53%;
+    --accent-foreground: 220 15% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 15% 98%;
+
+    --border: 220 15% 15%;
+    --input: 220 15% 11%;
+    --ring: 221 83% 53%;
+
+    /* Code Highlighting */
+    --code-background: 220 15% 8%;
+    --code-border: 220 15% 18%;
+
+    /* Animations & Effects */
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(262 83% 58%));
+    --gradient-message: linear-gradient(145deg, hsl(220 15% 11%), hsl(220 15% 13%));
+    --shadow-message: 0 2px 8px hsl(220 15% 5% / 0.3);
+    --shadow-sidebar: 2px 0 8px hsl(220 15% 3% / 0.4);
+
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -55,42 +86,16 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+  /* Light mode override (keeping dark as default for AI assistant theme) */
+  .light {
+    --background: 220 15% 98%;
+    --foreground: 220 15% 10%;
+    --chat-background: 220 15% 96%;
+    --user-message: 221 83% 53%;
+    --ai-message: 220 15% 100%;
+    --sidebar-background: 220 15% 100%;
+    --input-background: 220 15% 98%;
+    --code-background: 220 15% 96%;
   }
 }
 
@@ -101,5 +106,107 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground;
+  }
+
+  /* Code Block Styling */
+  .code-block {
+    @apply rounded-lg border border-code-border bg-code-background;
+  }
+
+  /* Typing Animation */
+  .typing-dots {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .typing-dots span {
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background: hsl(var(--muted-foreground));
+    animation: typing 1.5s infinite ease-in-out;
+  }
+
+  .typing-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .typing-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes typing {
+    0%, 60%, 100% {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    30% {
+      transform: scale(1.4);
+      opacity: 1;
+    }
+  }
+
+  /* Smooth streaming text */
+  .streaming-text {
+    animation: fadeInUp 0.3s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer components {
+  /* Message Bubbles */
+  .message-bubble {
+    @apply rounded-2xl px-4 py-3 max-w-[85%] shadow-message transition-all duration-200;
+  }
+
+  .message-user {
+    @apply bg-user-message text-user-message-foreground ml-auto;
+  }
+
+  .message-ai {
+    @apply bg-ai-message text-ai-message-foreground mr-auto;
+  }
+
+  /* Chat Input */
+  .chat-input {
+    @apply bg-input-background border-input-border focus:border-input-focus resize-none transition-all duration-200;
+  }
+
+  /* Sidebar Items */
+  .sidebar-item {
+    @apply rounded-lg px-3 py-2 text-sm transition-all duration-200 hover:bg-sidebar-hover;
+  }
+
+  .sidebar-item.active {
+    @apply bg-sidebar-active text-primary-foreground;
   }
 }
